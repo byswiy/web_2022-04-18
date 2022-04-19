@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>   
     
  <%
- 	String failMessage = (String) request.getParameter("fail");
- 
+ 	String failMessage = (String) request.getAttribute("fail");
+ 	
  	boolean isLogin = false;
  
  	try {
