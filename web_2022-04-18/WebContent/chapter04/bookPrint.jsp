@@ -15,7 +15,13 @@
 <title>도서 정보 출력</title>
 </head>
 <body>
+	<!-- ${requestScope["book"].title } -->
 
+	<!-- EL에서 변수 이름을 사용하면 먼저 request 안에서 book 이름을 찾음 -->
+	<!-- request 안에서 book 이름을 찾았으면 이름에 들어있는 값을 사용 -->
+	<!-- request 안에서 book 이름을 찾지 못했으면 session으로 넘어가서 book을 찾음 -->
+	<!-- session 안에서 book 이름을 찾았으면 그 이름에 들어있는 값을 사용 -->
+	<!-- session 안에서 book 이름을 찾지 못했으면 application으로 넘어가서 book을 찾음 -->
 	<p>책 제목 : ${book.title }</p>
 	<p>책 저자 : ${book.author }</p>
 	<p>출판사 : ${book.publisher }</p>
