@@ -1,11 +1,13 @@
 <%@page import="bean.Bean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-	String name = request.getParameter("name");
 
-	Bean bean = new Bean();
-	bean.setName(name);
-%>
+<jsp:useBean id="bean" class="bean.Bean" /> <%-- Bean bean new Bean() 과 같은 역할--%>
+<jsp:setProperty property="name" name="bean" value="<%= request.getParameter(\"name\") %>" /> <%-- bean.setName(name); 와 같은 역할--%>
+
+<%-- <% --%>
+<!-- String name = request.getParameter("name"); -->
+<!-- bean.setName(name); -->
+<%-- %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 액션 태그를 사용하지 않고 Bean 클래스 사용해보기 -->
-	<h1>Welcome <%= bean.getName() %></h1>
+	<!-- 자바 빈즈를 사용하지 않고 Bean 클래스 사용해보기 -->
+<%-- 	<h1>Welcome <%= bean.getName() %></h1> --%>
+	<h1>Welcome <jsp:getProperty property="name" name ="bean" /></h1>
 </body>
 </html>
