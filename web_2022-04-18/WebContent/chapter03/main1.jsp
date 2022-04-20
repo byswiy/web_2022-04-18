@@ -11,7 +11,9 @@
 </head>
 <body>
 	<%--  	<jsp:include page="header.jsp" /> --%>
-	<jsp:include page="<%= url %>"/>
+	<jsp:include page="<%= url %>">
+		<jsp:param value="user" name="user"/>
+ 	</jsp:include>
  	
  	<main>main1.jsp의 main 컨텐츠</main>
  	
