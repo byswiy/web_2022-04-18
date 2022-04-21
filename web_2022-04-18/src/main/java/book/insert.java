@@ -28,7 +28,7 @@ public class insert extends HttpServlet {
 		
 		request.setAttribute("book", book);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/chapter04/bookInsert.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/chapter04/bookPrint.jsp");
 		rd.forward(request, response);
 			
 		}
