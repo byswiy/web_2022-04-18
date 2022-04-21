@@ -9,7 +9,7 @@
 <body>
 	<h1>놀이기구 탑승자의 나이를 입력하세요</h1>
 	
-	<form action="Ex03.jsp">
+	<form action="Ex04.jsp">
 		<label>나이 : <input type="text" name="age"></label>
 		<br>
 		<input type="submit">
