@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:set var="index" value="0" />
 	
 	<c:forEach items="${arr }" var="item">
-		<p>${item }</p>		
+		<p>arr[${index }] => ${item }</p>		
+		
+		<c:set var="index" value="${index + 1 }" />
 	</c:forEach>
 	
 </body>
