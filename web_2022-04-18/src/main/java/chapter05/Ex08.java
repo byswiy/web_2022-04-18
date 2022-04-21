@@ -41,7 +41,7 @@ public class Ex08 extends HttpServlet {
 		bookList.add(b1);
 		bookList.add(b2);
 		
-		request.setAttribute("book", bookList);
+		request.setAttribute("bookList", bookList);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/chapter05/Ex08.jsp");
 		rd.forward(request, response);
